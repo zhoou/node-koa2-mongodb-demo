@@ -1,0 +1,26 @@
+{
+  "name": "node-koa2-mongodb-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "koa2",
+    "node",
+    "mongodb"
+  ],
+  "author": "zhoou",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "mongoose": "^4.13.2"
+  },
+  "devDependencies": {
+    "keygrip": "^1.0.2",
+    "nodemon": "^1.12.1"
+  }
+}
