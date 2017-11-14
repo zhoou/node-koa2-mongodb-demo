@@ -1,8 +1,9 @@
 const http = require('http')
-const https = require('https')
+// const https = require('https')
 const Koa = require('koa')
 const KeyGrip = require('keyGrip')
 const config = require('./config')
+const logger = require('./logs')
 const app = new Koa()
 
 // setting keys
@@ -21,7 +22,7 @@ app.use(async (ctx, next) => {
   const start = Date.now()
   await next()
   const ms = Date.now() - start
-  console.log(`${ctx.method} ${ctx.url}`)
+  logger.log('info', `${ctx.method} ${ctx.url}`)
 })
 
 // response
@@ -33,9 +34,11 @@ app.use(async ctx => {
 
 // error
 app.on('error', (err, ctx) => {
-  log.error('server error', err, ctx)
+  logger.log('error', `${ctx.method} ${ctx.url} ${err}`)
 });
 
 // app.listen(3000)
-http.createServer(app.callback()).listen(config.port)
-https.createServer(app.callback()).listen(config.https_port)
+http.createServer(app.callback()).listen(config.port, () => {
+  logger.log('info', `node-Koa Run！port at ${config.port}`)
+})
+// https.createServer(app.callback()).listen(config.https_port)
