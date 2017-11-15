@@ -1,0 +1,112 @@
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T06:29:20.544Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T06:29:20.593Z"}
+{"level":"info","message":"GET /","timestamp":"2017-11-15T06:29:33.830Z"}
+{"level":"info","message":"IP:undefined GET /","timestamp":"2017-11-15T06:29:33.835Z"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2017-11-15T06:29:33.898Z"}
+{"level":"info","message":"IP:undefined GET /favicon.ico","timestamp":"2017-11-15T06:29:33.900Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T06:29:57.496Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T06:29:57.512Z"}
+{"level":"error","message":"POST /signup TypeError: Cannot match against 'undefined' or 'null'.","timestamp":"2017-11-15T06:32:50.014Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T06:33:53.588Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T06:33:53.638Z"}
+{"level":"error","message":"POST /signup ReferenceError: req is not defined","timestamp":"2017-11-15T06:34:03.104Z"}
+{"level":"error","message":"POST /signup ReferenceError: req is not defined","timestamp":"2017-11-15T06:34:04.712Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T06:34:28.626Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T06:34:28.685Z"}
+{"level":"error","message":"POST /signup TypeError: Cannot match against 'undefined' or 'null'.","timestamp":"2017-11-15T06:34:34.439Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T06:35:43.036Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T06:35:43.078Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T06:44:59.120Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T06:44:59.142Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T06:51:08.893Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T06:51:08.933Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T06:58:51.928Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T06:58:51.964Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T07:00:07.868Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T07:00:07.900Z"}
+{"level":"error","message":"POST /signup ReferenceError: res is not defined","timestamp":"2017-11-15T07:00:29.604Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T07:00:52.397Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T07:00:52.432Z"}
+{"level":"error","message":"POST /signup ReferenceError: res is not defined","timestamp":"2017-11-15T07:01:13.358Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T07:09:42.206Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T07:09:42.232Z"}
+{"level":"error","message":"POST /signup TypeError: ctx.error is not a function","timestamp":"2017-11-15T07:09:58.242Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T07:15:20.007Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T07:15:20.023Z"}
+{"level":"error","message":"POST /signup ReferenceError: res is not defined","timestamp":"2017-11-15T07:16:23.301Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T07:28:06.828Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T07:28:06.892Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T07:56:08.937Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T07:56:08.953Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T07:56:46.399Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T07:56:46.430Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T07:59:53.233Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T07:59:53.255Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:00:42.816Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:00:42.836Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:02:44.531Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:02:44.555Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:06:51.296Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:06:51.414Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:07:31.729Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:07:31.755Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:09:32.868Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:09:32.882Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:09:40.084Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:09:40.107Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:10:35.871Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:10:35.888Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:11:29.922Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:11:29.958Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:12:15.611Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:12:15.651Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:24:11.461Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:24:11.494Z"}
+{"level":"error","message":"POST /api/signup TypeError: next is not a function","timestamp":"2017-11-15T08:24:15.676Z"}
+{"level":"error","message":"POST /api/signup TypeError: next is not a function","timestamp":"2017-11-15T08:24:40.995Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:35:20.405Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:35:20.451Z"}
+{"level":"info","message":"IP:::1 POST /api/signin","timestamp":"2017-11-15T08:50:19.604Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T08:53:42.143Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T08:53:42.159Z"}
+{"level":"info","message":"IP:::1 POST /api/signin","timestamp":"2017-11-15T08:56:30.281Z"}
+{"level":"info","message":"IP:::1 POST /api/signin","timestamp":"2017-11-15T08:57:23.430Z"}
+{"level":"info","message":"IP:::1 POST /api/signin","timestamp":"2017-11-15T08:58:15.404Z"}
+{"level":"error","message":"POST /api/login TypeError: req.flash is not a function","timestamp":"2017-11-15T08:58:56.613Z"}
+{"level":"error","message":"POST /api/login TypeError: req.flash is not a function","timestamp":"2017-11-15T08:59:08.309Z"}
+{"level":"error","message":"POST /api/login TypeError: req.flash is not a function","timestamp":"2017-11-15T08:59:19.205Z"}
+{"level":"error","message":"POST /api/login TypeError: req.flash is not a function","timestamp":"2017-11-15T09:00:13.245Z"}
+{"level":"error","message":"POST /api/login TypeError: req.flash is not a function","timestamp":"2017-11-15T09:00:14.387Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:01:34.873Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:01:34.891Z"}
+{"level":"error","message":"POST /api/login TypeError: req.flash is not a function","timestamp":"2017-11-15T09:01:39.849Z"}
+{"level":"error","message":"POST /api/login TypeError: req.flash is not a function","timestamp":"2017-11-15T09:01:41.209Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:06:36.115Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:06:36.137Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:09:09.755Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:09:09.779Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:17:45.976Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:17:46.002Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:23:49.309Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:23:49.330Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:24:17.247Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:24:17.279Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:25:05.138Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:25:05.160Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:26:32.569Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:26:32.602Z"}
+{"level":"error","message":"POST /api/login ReferenceError: user is not defined","timestamp":"2017-11-15T09:27:09.195Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:27:38.188Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:27:38.209Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:27:51.307Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:27:51.332Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:29:17.165Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:29:17.195Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:31:20.874Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:31:20.889Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:32:24.220Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:32:24.240Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T09:36:44.561Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T09:36:44.588Z"}
+{"level":"info","message":"node-Koa Run！port at 3000","timestamp":"2017-11-15T10:06:46.769Z"}
+{"level":"info","message":"mongodb connect success！","timestamp":"2017-11-15T10:06:46.788Z"}
