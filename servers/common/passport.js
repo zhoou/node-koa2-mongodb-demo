@@ -1,11 +1,15 @@
-const passport = require('passport')
-const LocalStrategy = require('passport-local').Strategy
+const passport = require('koa-passport')
+const LocalStrategy = require('passport-local')
 const User = require('../schemas/user')
 
-const localLogin = new LocalStrategy ({ // or whatever you want to use
-    usernameField: 'email',    // define the parameter in req.body that passport can use as username and password
-    passwordField: 'password'
-  },
+const localOptions = { // or whatever you want to use
+  usernameField: 'email',    // define the parameter in req.body that passport can use as username and password
+  passwordField: 'password',
+  session: false
+}
+
+// 用户名密码验证策略
+passport.use(new LocalStrategy (localOptions, 
   /**
    * @param username 用户输入的用户名
    * @param password 用户输入的密码
@@ -17,14 +21,24 @@ const localLogin = new LocalStrategy ({ // or whatever you want to use
       if (!user) {
         return done(null, false, { message: 'Incorrect email.' });
       }
-      if (!user.validPassword(password)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
+      user.validPassword(password, (err, isAuthorize) => {
+        if (!isAuthorize) {
+          return done(null, false, { message: 'Incorrect password.' });
+        }
+        return done(null, user);
+      })
     });
   }
-)
+))
 
-passport.use(localLogin)
+// serializeUser 在用户登录验证成功以后将会把用户的数据存储到 session 中
+passport.serializeUser(function (user, done) {
+  done(null, user)
+})
+
+// deserializeUser 在每次请求的时候将从 session 中读取用户对象，并将其封装到 req.user
+passport.deserializeUser(function (user, done) {
+  return done(null, user)
+})
 
 module.exports = passport;

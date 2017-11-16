@@ -15,11 +15,10 @@ exports.Login = async (ctx, next) => {
   return passport.authenticate('local', (err, user, info, status) => {
     // User has already had their email and password auth'd
     // just need to give them a token
-    // const { user } = ctx.request.body;
     if (!user) {
       ctx.body = {
         code: 200,
-        message: 'Login Failed!'
+        message: info.message
       }
       return
     } else {

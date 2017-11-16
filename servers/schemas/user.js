@@ -12,14 +12,14 @@ const userSchema = new mongoose.Schema({
 userSchema.pre('save', function(next) {
   const user = this
   bcrypt.hash(user.password, config.saltRounds, (err, hash) => {
-      if(err) return next(err);
-      
-      user.password = hash;
-      next();
+    if(err) return next(err);
+    
+    user.password = hash;
+    next();
   });
 });
 
-userSchema.methods.comparePassword = function(candidatePassword, callback) {
+userSchema.methods.validPassword = function(candidatePassword, callback) {
   bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
       if(err) return callback(err);
 
