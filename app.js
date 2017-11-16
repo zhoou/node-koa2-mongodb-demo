@@ -34,6 +34,8 @@ app.use(async (ctx, next) => {
   await next()
   const ms = Date.now() - start
   ctx.set('X-Response-Time', `${ms}ms`)
+  // These keys(app.keys) may be rotated and are used when signing cookies with the { signed: true }
+  ctx.cookies.set('name', 'zhoou', { signed: true })
 })
 
 // logger
@@ -44,13 +46,6 @@ app.use(async (ctx, next) => {
   // ip查询服务
   const ipnet = ctx.ip
   logger.log('info', `IP:${ipnet} ${ctx.method} ${ctx.url}`)
-})
-
-// response
-app.use(async ctx => {
-  // These keys(app.keys) may be rotated and are used when signing cookies with the { signed: true }
-  ctx.cookies.set('name', 'zhoou', { signed: true })
-  // ctx.body = "Hello, world!"
 })
 
 // error

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
-const config = require('../../config')
+const config = require('../config')
 
 const userSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },

@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
-const passport = require('../common/passport');
-const config = require('../../config')
+const passport = require('../middlewares/passport');
+const config = require('../config')
 const User = require('../schemas/user')
 
 function tokenForUser(user) {

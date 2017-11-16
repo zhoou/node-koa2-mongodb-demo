@@ -1,6 +1,6 @@
-const Router = require('koa-router');
-const authentication = require('./servers/controllers/authsControl');
-const articles = require('./servers/controllers/articlesControl');
+const Router = require('koa-router')
+const authentication = require('./controllers/authsControl')
+const articles = require('./controllers/articlesControl')
 
 const router = new Router();
 
