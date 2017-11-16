@@ -6,32 +6,12 @@ const User = require('../schemas/user')
 function tokenForUser(user) {
   const timestamp = new Date().getTime();
   // Signing a token with 1 hour of expiration:
-  const token = jwt.sign({ user: {name: user.nikename, type: user.type}, iat: timestamp }, config.secret, { expiresIn: '1h' })
+  const token = jwt.sign({ user: {id: user.id, name: user.nikename}, iat: timestamp }, config.secret, { expiresIn: '1h' })
   return token
 }
 
-// 登录
-exports.Login = async (ctx, next) => {
-  return passport.authenticate('local', (err, user, info, status) => {
-    // User has already had their email and password auth'd
-    // just need to give them a token
-    if (!user) {
-      ctx.body = {
-        code: 200,
-        message: info.message
-      }
-      return
-    } else {
-      ctx.body = {
-        token: tokenForUser(user),
-        user: { id: user.id, name: user.nikename }
-      }
-    }
-  })(ctx, next)
-};
-
 // 注册
-exports.signUp = async(ctx, next) => {
+exports.SignUp = async(ctx, next) => {
     const { email, password, repassword, nikename } = ctx.request.body;
    
     // check params
@@ -70,4 +50,37 @@ exports.signUp = async(ctx, next) => {
       token: tokenForUser(user), 
       user: { id: user.id, name: user.nikename }
     }
+}
+
+// 登录
+exports.Login = async (ctx, next) => {
+  return passport.authenticate('local', (err, user, info, status) => {
+    // User has already had their email and password auth'd
+    // just need to give them a token
+    if (!user) {
+      ctx.body = {
+        code: 200,
+        message: info.message
+      }
+    } else {
+      ctx.body = {
+        token: tokenForUser(user),
+        user: { id: user.id, name: user.nikename }
+      }
+    }
+  })(ctx, next)
+}
+
+// 验证token
+exports.Verify = async (ctx, next) => {
+  return passport.authenticate('jwt', (err, user, info, status) => {
+    if (!user) {
+      ctx.body = {
+        code: 200,
+        message: info.message
+      }
+    } else {
+      next()
+    }
+  })(ctx, next)
 }

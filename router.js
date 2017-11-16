@@ -1,13 +1,16 @@
 const Router = require('koa-router');
-const passport = require('./servers/common/passport');
 const authentication = require('./servers/controllers/authsControl');
-
-const requireAuth = passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login', failureFlash: true, session: false })
+const articles = require('./servers/controllers/articlesControl');
 
 const router = new Router();
 
-// router.post('/api/login', requireAuth, authentication.Login);
-router.post('/api/login', authentication.Login);
-router.post('/api/signup', authentication.signUp);
+router.post('/api/login', authentication.Login)
+router.post('/api/signup', authentication.SignUp)
+
+// Permission Validation
+// request Headers setting => (Authorization: 'bearer ' + token)
+router.use('/api/*', authentication.Verify)
+
+router.get('/api/getdata', articles.GetArticleList)
 
 module.exports = router
