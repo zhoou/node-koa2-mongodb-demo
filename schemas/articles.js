@@ -24,6 +24,7 @@ const articleSchema = new Schema({
   date: { type: Date, default: Date.now },
   hidden: Boolean,
   meta: {
+    readtimes: { type: Number, default: 0 },
     votes: { type: Number, default: 0 },
     favs:  { type: Number, default: 0 }
   }
@@ -31,7 +32,7 @@ const articleSchema = new Schema({
 
 // search by id
 articleSchema.statics.findById = function (id, cb) {
-  return this.find({ _id: id }, {__v: 0}, cb); // exclude two fields: _id and __v
+  return this.findOne({ _id: id }, {__v: 0}, cb); // exclude fields: __v
 };
 // search by title
 articleSchema.statics.findByTitle = function (title, cb) {

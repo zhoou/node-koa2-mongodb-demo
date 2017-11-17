@@ -40,6 +40,7 @@ exports.CreateArticle = async (ctx, next) => {
   }
 }
 
+// get article by id
 exports.GetArticleById = async(ctx, next) => {
   // auth check
   await authsControl.Verify(ctx, next)
@@ -51,6 +52,10 @@ exports.GetArticleById = async(ctx, next) => {
 
   await Articles.findById(id, (err, article) => {
     if (err) return err
+
+    // record reading times
+    article.meta.readtimes++
+    article.save()
 
     ctx.body = article
   });

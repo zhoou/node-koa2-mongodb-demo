@@ -7,6 +7,7 @@ const router = new Router();
 // Auth api
 router.post('/api/login', authentication.Login)
 router.post('/api/signup', authentication.SignUp)
+router.post('/api/updatepassword', authentication.UpdatePassword)
 
 // Permission Validation
 // request Headers setting => (Authorization: 'bearer ' + token)

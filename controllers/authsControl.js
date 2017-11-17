@@ -84,3 +84,50 @@ exports.Verify = async (ctx, next) => {
     }
   })(ctx, next)
 }
+
+/** update password */
+// params: id, originpwd, newpwd, checkpwd
+exports.UpdatePassword = async (ctx, next) => {
+  const { id, originpwd, newpwd, checkpwd } = ctx.request.body
+  if (!id || !originpwd || !newpwd) {
+    ctx.body = {
+      code: 400,
+      messages: 'You must provide old password & new password and userID'
+    }
+    return;
+  } else if (newpwd === originpwd) {
+    ctx.body = {
+      code: 200,
+      messages: 'The new password and the older password are the same!'
+    }
+    return;
+  } else if (newpwd !== checkpwd) {
+    ctx.body = {
+      code: 200,
+      messages: 'The new password and the check password are not same!'
+    }
+    return;
+  }
+
+  const user = await User.findOne({_id: id});
+  if (!user) {
+    ctx.body = {
+      code: 200,
+      message: 'The user is not exist !'
+    }
+    return;
+  }
+
+  await user.validPassword(originpwd, (err, isAuthorize) => {
+    if (err) return err
+    if (isAuthorize) {
+      user.password = newpwd
+      user.save()
+    } else {
+      ctx.body = {
+        code: 200,
+        messages: 'The origin password is not correct!'
+      }
+    }
+  })
+}
