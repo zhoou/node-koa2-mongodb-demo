@@ -29,7 +29,7 @@ const JwtStrategy = require('passport-jwt').Strategy
 const ExtractJwt = require('passport-jwt').ExtractJwt
 
 const User = require('../schemas/user')
-const config = require('../../config')
+const config = require('../config')
 
 /** 用户名密码验证策略 */
 const localOptions = { // or whatever you want to use

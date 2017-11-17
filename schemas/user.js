@@ -3,10 +3,18 @@ const bcrypt = require('bcrypt')
 const config = require('../config')
 
 const userSchema = new mongoose.Schema({
-  email: { type: String, unique: true, lowercase: true },
+  email: { 
+    type: String, 
+    required: true,
+    index: {
+      unique: true,
+      sparse: true
+    } 
+  },
   password: { type: String },
   nikename: { type: String },
-  type: { type: String }
+  type: { type: String },
+  alive: { type: Boolean, default: true }
 });
 
 userSchema.pre('save', function(next) {

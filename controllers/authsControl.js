@@ -76,7 +76,7 @@ exports.Verify = async (ctx, next) => {
   return passport.authenticate('jwt', (err, user, info, status) => {
     if (!user) {
       ctx.body = {
-        code: 200,
+        code: 401,
         message: info.message
       }
     } else {

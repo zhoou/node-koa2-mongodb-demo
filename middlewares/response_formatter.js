@@ -22,18 +22,18 @@ const response_formatter = (ctx) => {
 const url_filter =(pattern) => {
   
     return async (ctx, next) => {
-        const reg = new RegExp(pattern)
-        //通过正则的url进行格式化处理
-        if (reg.test(ctx.originalUrl)) {
-          //先去执行路由
-          await next()
-          response_formatter(ctx)
-        } else {
-          ctx.body = {
-            code: 404,
-            message: 'Request URL Not Found!'
-          }
+      const reg = new RegExp(pattern)
+      // 通过正则的url进行格式化处理
+      if (reg.test(ctx.originalUrl)) {
+        // 先去执行路由
+        await next()
+        response_formatter(ctx)
+      } else {
+        ctx.body = {
+          code: 404,
+          message: 'Request URL Not Found!'
         }
+      }
     }
 }
 

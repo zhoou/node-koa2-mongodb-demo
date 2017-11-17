@@ -4,13 +4,17 @@ const articles = require('./controllers/articlesControl')
 
 const router = new Router();
 
+// Auth api
 router.post('/api/login', authentication.Login)
 router.post('/api/signup', authentication.SignUp)
 
 // Permission Validation
 // request Headers setting => (Authorization: 'bearer ' + token)
-router.use('/api/*', authentication.Verify)
+// router.use('/api/*', authentication.Verify)
 
-router.get('/api/getdata', articles.GetArticleList)
+// Article api
+router.get('/api/getarticlelists', articles.GetArticleLists)
+router.post('/api/createarticle', articles.CreateArticle)
+router.get('/api/getarticlebyid', articles.GetArticleById)
 
 module.exports = router
